@@ -280,7 +280,7 @@ Make it the best-performing implementation and the most convenient one.
      - [ ] handle submodules
      - [ ] handle sparse directories
      - [ ] handle sparse index
-     - [ ] linear scaling with multi-threading up to IO saturation
+     - [x] linear scaling with multi-threading up to IO saturation
   - supported attributes to affect working tree and index contents
      - [ ] eol
      - [ ] working-tree-encoding
@@ -291,7 +291,9 @@ Make it the best-performing implementation and the most convenient one.
      - [ ] filter processes
      - [ ] single-invocation clean/smudge filters
 * manage multiple worktrees
-* deal with exclude specifications, like .gitignore and other exclude files.
+* access to per-path information, like `.gitignore` and `.gitattributes` in a manner well suited for efficient lookups
+  * [x] _exclude_ information
+  * [ ] attributes
  
 ### git-revision
 * find specifications for revisions (like `git name-rev`)
@@ -438,6 +440,8 @@ See its [README.md](https://github.com/Byron/gitoxide/blob/main/git-lock/README.
     * [ ] support for different backends like `files` and `reftable`
   * **worktrees**
     * [ ] open a repository with worktrees
+    * [x] access exclude information
+    * [ ] access attribute information
   * [ ] remotes with push and pull
   * [x] mailmap   
   * [x] object replacements (`git replace`)
