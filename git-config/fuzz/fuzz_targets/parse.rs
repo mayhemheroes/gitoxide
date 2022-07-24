@@ -1,5 +1,6 @@
 #![no_main]
 
+use git_config::parser::parse_from_bytes;
 use libfuzzer_sys::fuzz_target;
 
 fuzz_target!(|data: &[u8]| {
