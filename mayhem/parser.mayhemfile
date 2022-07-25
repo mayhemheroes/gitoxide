@@ -4,4 +4,4 @@ target: parser
 # image: ghcr.io/nottirb/gitoxide:latest
 
 cmds:
-    - cmd: /parser
+    - cmd: /parse
