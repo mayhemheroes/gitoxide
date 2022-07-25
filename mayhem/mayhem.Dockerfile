@@ -16,4 +16,4 @@ RUN cd git-config && ${HOME}/.cargo/bin/cargo fuzz build --fuzz-dir ./fuzz
 # Package Stage
 FROM ubuntu:20.04
 
-COPY --from=builder gitoxide/git-config/fuzz/target/x86_64-unknown-linux-gnu/release/parser /
+COPY --from=builder gitoxide/git-config/fuzz/target/x86_64-unknown-linux-gnu/release/parse /
