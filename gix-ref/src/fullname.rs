@@ -122,7 +122,7 @@ impl FullNameRef {
             Category::WorktreePrivate,
             Category::Rewritten,
         ] {
-            if name.starts_with(category.prefix().as_ref()) {
+            if name.starts_with(category.prefix().as_bytes()) {
                 return Some((
                     *category,
                     name.strip_prefix(b"refs/")
